@@ -3,3 +3,9 @@ https://tailwindcss.com/docs/guides/vite
 
 2.lalu buka cmd dan instal moment.js buat date formaternya
 - ketik npm i moment
+
+3.Jangan lupa Juga Install Vue Router dan Tambahkan folder router dan views
+
+4.Isi folder router dengan index.js scriptnya tinggal copas we kaya standar pabrik vue nya
+
+5.Yang isi folder component juga sama
