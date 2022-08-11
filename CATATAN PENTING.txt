@@ -1,3 +1,7 @@
+
+CARA MEMBUKA PROJECT :
+- npm run dev
+
 1.BUKA INI AGAR BISA MENGINSTALL VUE JS BERSAMA TAILWINDNYA
 https://tailwindcss.com/docs/guides/vite
 
