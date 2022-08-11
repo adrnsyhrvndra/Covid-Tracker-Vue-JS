@@ -2,9 +2,9 @@
 
   <Header/>
 
-  <div class="container text-center mx-auto bg-slate-400">
+  <div class="container mx-auto">
 
-    <router-view/>
+    <Home />
 
   </div>
 
@@ -14,11 +14,15 @@
 
 import Header from "./components/Header.vue";
 
+import Home from "./components/Home.vue";
+
 export default{
 
   components:{
 
-    Header
+    Header,
+
+    Home
 
   }
 
