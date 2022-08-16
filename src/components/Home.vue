@@ -1,10 +1,20 @@
 <template>
 
-    <div class="home">
+    <main v-if="!loading">
         
-        Hello Wordl
+        Show Data
         
-    </div>
+    </main>
+
+    <main class="flex flex-col align-center justify-center text-center" v-else>
+
+        <div class="text-gray-500 text-3xl mt-10 mb-6">
+
+            Fetching Data
+
+        </div>
+
+    </main>
 
 </template>
 
@@ -15,6 +25,26 @@ export default {
     name : 'Home',
 
     components:{},
+
+    data() {
+
+        return{
+
+            loading:true,
+
+            title:'Global',
+
+            dataDate:'',
+
+            stats:{},
+
+            countries:[]
+
+            // loadingImage: require('../assets/hourglass.gif')
+
+        }
+
+    },
 
     methods:{
 
@@ -34,7 +64,13 @@ export default {
 
         const data = await this.fetchCovidData()
 
-        console.log(data)
+        this.dataDate = data.Date
+
+        this.stats = data.Global
+
+        this.countries = data.Countries
+
+        this.loading = false
 
     }
 
