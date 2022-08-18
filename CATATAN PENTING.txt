@@ -15,3 +15,7 @@ https://tailwindcss.com/docs/guides/vite
 4.Isi folder router dengan index.js scriptnya tinggal copas we kaya standar pabrik vue nya
 
 5.Yang isi folder component juga sama
+
+6.Nanti pakai function ini number with commas
+
+https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
