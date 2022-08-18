@@ -1,6 +1,8 @@
 <template>
 
     <main v-if="!loading">
+
+        <!-- Data Title -->
         
         <div class="text-center">
 
@@ -9,6 +11,8 @@
             <div class="text-2xl mt-4 mb-10">{{timestamp}}</div>
 
         </div>
+
+        <!-- Data Boxes -->
 
         <div class="text-center grid md:grid-cols-2 gap-4">
 
@@ -65,6 +69,20 @@
             <!-- End Box -->
 
         </div>
+
+        <!-- Country Select -->
+
+        <select @change="onChange()" v-model="selected" class="form-select mt-10 block w-full border p-3 rounded">
+
+            <option value="0">Select Country</option>
+
+            <option v-for="country in countries" v-bind:value="country.ID">
+            
+                {{ country.Country }}
+            
+            </option>
+
+        </select>
         
     </main>
 
@@ -91,6 +109,8 @@ export default {
     data() {
 
         return{
+
+            selected:0,
 
             loading:true,
 
@@ -123,6 +143,16 @@ export default {
         numberWithCommas(x){
 
             return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+        },
+
+        onChange(){
+
+            const country = this.countries.find((item) => item.ID === this.selected)
+
+            this.stats = country
+
+            this.title = country.Country
 
         }
 
