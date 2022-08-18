@@ -2,7 +2,13 @@
 
     <main v-if="!loading">
         
-        Show Data
+        <div class="text-center">
+
+            <h2 class="text-3xl font-bold">{{title}}</h2>
+
+            <div class="text-2xl mt-4 mb-10">{{timestamp}}</div>
+
+        </div>
         
     </main>
 
@@ -71,6 +77,16 @@ export default {
         this.countries = data.Countries
 
         this.loading = false
+
+    },
+
+    computed:{
+
+        timestamp : function () {
+            
+            return moment(this.dataDate).format('MMMM Do YYYY, h:mm:ss a')
+
+        }
 
     }
 

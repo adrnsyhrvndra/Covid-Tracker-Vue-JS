@@ -8,6 +8,8 @@ https://tailwindcss.com/docs/guides/vite
 2.lalu buka cmd dan instal moment.js buat date formaternya
 - ketik npm i moment
 
+2a.Cara lebih mudah adalah pake CDN moment.js lalu taro di Index.html
+
 3.Jangan lupa Juga Install Vue Router dan Tambahkan folder router dan views
 
 4.Isi folder router dengan index.js scriptnya tinggal copas we kaya standar pabrik vue nya
